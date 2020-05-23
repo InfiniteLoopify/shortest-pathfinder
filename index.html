@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Distance Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Distance Calculator</h1>
+        </div>
+    </header>
+
+    <!-- Source/Dest Dropdown Menu -->
+    <div class="container menu">
+    <h1>Source</h1>
+        <select name="" id="source" onclick="hideSameDest(0); markNode('source'); generateGoogleLink()">
+            <option value="0">Gulistan-e-Johar</option>
+            <option value="1">Gulshan-e-Iqbal</option>
+            <option value="2">Malir</option>
+            <option value="3">Shah Faisal Town</option>
+            <option value="4">North Nazimabad</option>
+            <option value="5">F.B. Area</option>
+            <option value="6">Clifton</option>
+            <option value="7">Saddar</option>
+            <option value="8">Gulshan-e-Hadeed</option>
+            <option value="9">New Karachi</option>
+        </select>
+        <h1>Destination</h1>
+        <select name="" id="dest" onclick="hideSameDest(1); markNode('dest'); generateGoogleLink()">
+            <option value="0">Gulistan-e-Johar</option>
+            <option value="1">Gulshan-e-Iqbal</option>
+            <option value="2">Malir</option>
+            <option value="3">Shah Faisal Town</option>
+            <option value="4">North Nazimabad</option>
+            <option value="5">F.B. Area</option>
+            <option value="6">Clifton</option>
+            <option value="7">Saddar</option>
+            <option value="8">Gulshan-e-Hadeed</option>
+            <option value="9">New Karachi</option>
+        </select>
+
+        <!-- Calculate Button -->
+        <button id="calc">Calculate</button>
+
+        <div id="mapLink">
+            <a id="googleLink"
+                href="https://www.google.com/maps/dir/Gulistan-e-Johar,+Karachi/Gulshan-e-Iqbal,+Karachi/"
+                target="_blank">
+                <img src="img/google-map.png" alt="Google Map Icon">
+                <p>Google Map Generator</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- SVG graph -->
+    <div class="container">
+        <div id="pathGraph">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+        </div>
+    </div>
+
+    <!-- Distance Info -->
+    <div class="container">
+        <div id="info">
+            <div>
+                <h1>Best Path</h1>
+                <p>-</p>
+            </div>
+            <div>
+                <h1>Total Distance</h1>
+                <p>-</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Map -->
+    <!-- <div class="container">
+        <div id="map"></div>
+    </div> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h1>Created By:</h1>
+            <p>name</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="d3/d3.min.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/script.js"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
+
+
+</body>
+
+</html>
